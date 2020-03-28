@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+
+	<!-- <classPathEntry location="/Users/anurag.kumar/.m2/repository/org/postgresql/postgresql/42.2.10/postgresql-42.2.10.jar"/> -->
+	<properties resource="application.properties"></properties>
+	
+	<context id="metadesign" targetRuntime="MyBatis3">
+		<jdbcConnection driverClass="${mbg.jdbc.driver-class-name}"
+			connectionURL="${mbg.jdbc.url}"
+			userId="${mbg.jdbc.username}" password="${mbg.jdbc.password}">
+		</jdbcConnection>
+
+		<javaModelGenerator
+			targetPackage="${mbg.target-package.domain}"
+			targetProject="mybatiscrud">
+			<property name="enableSubPackages" value="true" />
+			<property name="" value=""/>
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<sqlMapGenerator
+			targetPackage="com.anurag.mybatiscrud.mapper"
+			targetProject="mybatiscrud">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="${mbg.target-package.mapper}"
+			targetProject="mybatiscrud">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+
+		<table tableName="users" domainObjectName="User" mapperName="UserMapper" 
+			enableCountByExample="false" />
+	</context>
+</generatorConfiguration>
