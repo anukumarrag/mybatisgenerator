@@ -2,7 +2,7 @@
 
 ## Prerequisite ##
 1. Create Databases "metadesign" in postgres
-2. Create a table "Users" (execute DB_query.sql file)
+2. Create a table "Users" (execute script/DB_query.sql file)
 3. update database URL, username and password inside application.properties (for each key inside it)
 4. Install mybatisgenerator plug-in in eclipse
 
